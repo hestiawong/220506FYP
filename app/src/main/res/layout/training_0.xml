@@ -2,15 +2,23 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".training_0_Activity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_training"
+        android:scaleType="centerCrop"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview_1"
         android:layout_width="350dp"
         android:layout_height="350dp"
         app:cardElevation="10dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="180dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="230dp"
         app:cardCornerRadius="30dp">
 
         <RelativeLayout
@@ -21,7 +29,8 @@
                 android:id="@+id/titlee"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Program"
+                android:text="Arm Program"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_marginTop="5dp"
                 android:textSize="25dp"/>
@@ -48,39 +57,291 @@
                     android:id="@+id/text_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" rounds and "
-                    android:layout_marginTop="5dp" />
-                <TextView
-                    android:id="@+id/exercise_num"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:layout_marginTop="5dp" />
-                <TextView
-                    android:id="@+id/text_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" exercises."
-                    android:layout_marginTop="5dp" />
+                    android:text="1 rounds and 6 exercises." />
             </LinearLayout>
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
-                android:layout_below="@id/descri_3"
+
+            <ScrollView
+                android:layout_below="@+id/descri_3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"/>
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:fillViewport="true">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="90dp"
+                            android:layout_height="70dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="20dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/yoga1"
+                                android:scaleType="centerCrop"/>
+                        </androidx.cardview.widget.CardView>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="15dp">
+                            <TextView
+                                android:id="@+id/a_0"
+                                android:layout_marginTop="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Breathe" />
+                            <TextView
+                                android:layout_below="@+id/a_0"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Breathe yourself calm" />
+                        </RelativeLayout>
+                    </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_1"
+                        android:layout_width="90dp"
+                        android:layout_height="70dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="20dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/pose_a"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true"/>
+                    </androidx.cardview.widget.CardView>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="15dp">
+                    <TextView
+                        android:id="@+id/a_1"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="Namaskarasana" />
+                    <TextView
+                        android:layout_below="@+id/a_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Beginner • 15 seconds" />
+                    </RelativeLayout>
+                </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="90dp"
+                            android:layout_height="70dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="20dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/pose_b"
+                                android:scaleType="centerCrop"
+                                android:adjustViewBounds="true"/>
+                        </androidx.cardview.widget.CardView>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="15dp">
+                            <TextView
+                                android:id="@+id/a_2"
+                                android:layout_marginTop="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Right Vrikshasana" />
+                            <TextView
+                                android:layout_below="@+id/a_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Beginner • 15 seconds" />
+                        </RelativeLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="90dp"
+                            android:layout_height="70dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="20dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/pose_c"
+                                android:scaleType="centerCrop"
+                                android:adjustViewBounds="true"/>
+                        </androidx.cardview.widget.CardView>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="15dp">
+                            <TextView
+                                android:id="@+id/a_3"
+                                android:layout_marginTop="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Left Vrikshasana" />
+                            <TextView
+                                android:layout_below="@+id/a_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Beginner • 15 seconds" />
+                        </RelativeLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="90dp"
+                            android:layout_height="70dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="20dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/pose_d"
+                                android:scaleType="centerCrop"
+                                android:adjustViewBounds="true"/>
+                        </androidx.cardview.widget.CardView>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="15dp">
+                            <TextView
+                                android:id="@+id/a_4"
+                                android:layout_marginTop="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Left Virabhadrasana" />
+                            <TextView
+                                android:layout_below="@+id/a_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Beginner • 15 seconds" />
+                        </RelativeLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="90dp"
+                            android:layout_height="70dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="20dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/pose_e"
+                                android:scaleType="centerCrop"
+                                android:adjustViewBounds="true"/>
+                        </androidx.cardview.widget.CardView>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="15dp">
+                            <TextView
+                                android:id="@+id/a_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Ashva Sanchalan \nAsana" />
+                            <TextView
+                                android:layout_below="@+id/a_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Beginner • 15 seconds" />
+                        </RelativeLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="90dp"
+                            android:layout_height="70dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="20dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/pose_f"
+                                android:scaleType="centerCrop"
+                                android:adjustViewBounds="true"/>
+                        </androidx.cardview.widget.CardView>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="15dp">
+                            <TextView
+                                android:id="@+id/a_6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Adho Mukha \nSvanasana" />
+                            <TextView
+                                android:layout_below="@+id/a_6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Beginner • 15 seconds" />
+                        </RelativeLayout>
+                    </TableRow>
+
+                </TableLayout>
+            </ScrollView>
+
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
+
+    <TableLayout
+        android:id="@+id/table_program"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardview_1"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:stretchColumns="*">
+    <TableRow>
+        <ImageView
+            android:id="@+id/volume_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="2dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/block_icon"
+            android:tint="@color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:text="User with shoulder, elbow injuries \nshould avoid or limit this program"/>
+    </TableRow>
+        </TableLayout>
+
     <Button
         android:id="@+id/btn_startTraining"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_roundcorner"
         android:text="Start Training"
         android:textColor="@android:color/white"
-        android:layout_marginLeft="30dp"
         android:textSize="15dp"
-        android:layout_below="@+id/cardview_1" />
-</RelativeLayout>
+        android:layout_below="@+id/table_program" />
+    </RelativeLayout>

@@ -18,6 +18,7 @@ import com.example.fyp_app.Breath;
 import com.example.fyp_app.EntryChoiceActivity;
 import com.example.fyp_app.R;
 import com.example.fyp_app.VolumeTunning;
+import com.example.fyp_app.training_0_Activity;
 
 public class HomeFragment extends Fragment {
     ImageView yogaArms;
@@ -39,7 +40,7 @@ public class HomeFragment extends Fragment {
         yogaArms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), EntryChoiceActivity.class));
+                startActivity(new Intent(getActivity(), training_0_Activity.class));
             }
         });
         return root;

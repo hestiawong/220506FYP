@@ -97,6 +97,7 @@
         <activity android:name=".DepressionActivity" />
         <activity android:name=".FoodRecommendActivity" />
 
+        <activity android:name=".training_0_Activity" />
     </application>
 
 </manifest>
